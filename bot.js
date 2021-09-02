@@ -349,16 +349,16 @@ ${chalk.blue.italic('👾Connecting to WhatsApp...')}`);
                     
                     var gb = await getMessage(msg.key.remoteJid, 'goodbye');
                     if (gb !== false) {
-                        var sewqueenimage = await axios.get(config.BYE_GIF, { responseType: 'arraybuffer' })
-                        await conn.sendMessage(msg.key.remoteJid, Buffer.from(sewqueenimage.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message});
+                        var amazoneimage = await axios.get(config.BYE_GIF, { responseType: 'arraybuffer' })
+                        await conn.sendMessage(msg.key.remoteJid, Buffer.from(amazoneimage.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message});
                     }
                     return;
                 } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
                    
                     var gb = await getMessage(msg.key.remoteJid);
                     if (gb !== false) {
-                    var sewqueenimage = await axios.get(config.WEL_GIF, { responseType: 'arraybuffer' })
-                    await conn.sendMessage(msg.key.remoteJid, Buffer.from(sewqueenimage.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message});
+                    var amazoneimage = await axios.get(config.WEL_GIF, { responseType: 'arraybuffer' })
+                    await conn.sendMessage(msg.key.remoteJid, Buffer.from(amazoneimage.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message});
                     }
                     return;
                 }
@@ -392,6 +392,14 @@ ${chalk.blue.italic('👾Connecting to WhatsApp...')}`);
                     var chat = conn.chats.get(msg.key.remoteJid)
                         
                     if ((config.SUDO !== false && msg.key.fromMe === false && command.fromMe === true &&
+                        (msg.participant && config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.SUDO || config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.SUDO)
+                    ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
+                        if (command.onlyPinned && chat.pin === undefined) return;
+                        if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
+                        else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
+                    }
+                   
+                   if ((config.SUDO !== false && msg.key.fromMe === false && command.fromMe === true &&
                         (msg.participant && config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.SUDO || config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.SUDO)
                     ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
                         if (command.onlyPinned && chat.pin === undefined) return;
