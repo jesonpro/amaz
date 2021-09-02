@@ -1,9 +1,7 @@
-/* Copyright (C) 2021 Karthik_terror-boy.
-
+/* Copyright (C) 2021 TENUX-Neotro.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-
-WhiteDevil - Karthik_terror-boy
+NEOTROX - TEENUHX
 */
 
 const chalk = require('chalk');
@@ -12,25 +10,25 @@ const fs = require('fs');
 async function whatsAsena() {
   const conn = new WAConnection();
   conn.logger.level = 'warn';
-  conn.version = [2, 2126, 14]
+  conn.version = [2, 2123, 8]
 
   conn.on('connecting', async () => {
-    console.log(`${chalk.green.bold('Karthik_terror-boy ')}${chalk.green.bold('-WhiteDevil')}
+    console.log(`${chalk.green.bold('AMAZONE SUPER BOT')}${chalk.green.bold('HATZU-HOLE')}
 ${chalk.white.italic('AsenaString code recipient')}
-${chalk.blue.bold('ℹ️  Connecting WhiteDevil... Please wait.')}`);
+${chalk.blue.bold('ℹ️  Connecting Amazone Alexa... Please wait.')}`);
   });
 
   conn.on('open', async () => {
     console.log(
-      chalk.green.bold('Asena QR Code: '),
-      'ASENA;;;' +
+      chalk.green.bold('Amazone QR Code: '),
+      'NEUTRO;;;' +
       Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString(
         'base64'
       )
     );
     await conn.sendMessage(
       conn.user.jid,
-      'ASENA;;;' +
+      'NEUTRO;;;' +
       Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString(
         'base64'
       ),
@@ -39,13 +37,13 @@ ${chalk.blue.bold('ℹ️  Connecting WhiteDevil... Please wait.')}`);
     if (conn.user.jid.startsWith('91')) {
       await conn.sendMessage(
         conn.user.jid,
-        '*~___________~* *'+ conn.user.name + ' ~___________~*\n\n*▪️ WhiteDevil Successfully Scanned✅️*\n*▪️Thanks For Choosing WhiteDevil 💞*',
+        '*~___________~* *'+ conn.user.name + ' ~___________~*\n\n*▪️ Amazone Successfully Scanned✅️*\n*▪️Thanks For Choosing Amazone Alexa 🌟🚀*',
         MessageType.text
       );
     } else {
       await conn.sendMessage(
         conn.user.jid,
-        '*~_____________~* *'+ conn.user.name + ' ~_____________~*\n\n*▪️ WhiteDevil Successfully Scanned✅️*\n*▪️Thanks For Choosing WhiteDevil 💞*',
+        '*~_____________~* *'+ conn.user.name + ' ~_____________~*\n\n*▪️ Amazone Successfully Scanned✅️*\n*▪️Thanks For Choosing Amazone Alexa 🌟🚀*',
         MessageType.text
       );
     }
