@@ -1,3 +1,10 @@
+/* Copyright (C) 2021 TENUX-Neotro.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+NEOTROX - TEENUHX
+*/
+
+
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const exec = require('child_process').exec;
@@ -43,24 +50,24 @@ megalink()
 var ldc = ''
 if (Config.LANG == 'AZ') ldc = '*Bağlantı Aşkarlandı!*'
 if (Config.LANG == 'TR') ldc = '*‎Link Tespit Edildi!*'
-if (Config.LANG == 'EN') ldc = '*Link Detected! mone ee link ivde allowed alla appo pinne engane , oke bye \n\n 🕊🕊*'
+if (Config.LANG == 'EN') ldc = '*Link Detected!🚀whatsapp Group Link Not Allowed This group.. ◽Action:⭕KICK*'
 if (Config.LANG == 'ML') ldc = '*ലിങ്ക് കണ്ടെത്തി!* ```മോനെ ഈ ലിങ്ക് ഇവിടെ അലോഡഡ് അല്ല അപ്പോൾ പിന്നെ എങ്ങനെയാ പോവുവാല്ലേ...``` , *WARNING⚠️* *ആണ് കേട്ടോ 🚫*'
 if (Config.LANG == 'ID') ldc = '*Tautan Terdeteksi!*'
-if (Config.LANG == 'PT') ldc = '*Link Detectado!*'
+if (Config.LANG == 'SI') ldc = '*Link Detected!මෙම සමූහයේ Link දැමීමට අවසර නොමැත.. ◽ක්‍රියාමාර්ගය:ඉවත් කිරීම*'
 if (Config.LANG == 'RU') ldc = '*Ссылка обнаружена!*'
 if (Config.LANG == 'HI') ldc = '*लिंक का पता चला!*'
 if (Config.LANG == 'ES') ldc = '*Enlace Detectado!*'
 Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (alllink_var == 'true' && message.jid !== '9082891698-1616356915@g.us') {
-        let regex1 = new RegExp('http://')
-        let regex2 = new RegExp('https://')
+        let regex1 = new RegExp('whatsapp.com')
+        let regex2 = new RegExp('www.')
         if (regex1.test(message.message)) {
             var us = await checkUsAdmin(message)
             var im = await checkImAdmin(message)
             if (!im) return;
             if (us) return;
-            await message.client.groupRemove(message.jid, [message.data.participant]);         
-            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+           await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+          await message.client.groupRemove(message.jid, [message.data.participant]);
         } 
         else if (regex2.test(message.message)) {
             var us = await checkUsAdmin(message)
@@ -70,7 +77,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             await message.client.groupRemove(message.jid, [message.data.participant]);         
             await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
         }
-        else if (message.message.match(/((?:[.]com)\b)/i)) {
+        else if (message.message.match(/((?:[.]www)\b)/i)) {
             var us = await checkUsAdmin(message)
             var im = await checkImAdmin(message)
             if (!im) return;
@@ -84,7 +91,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
 var alllink_var = ''
 async function kt() {
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
-        AI_var = vars.Z_WHITE_AI
+        AI_var = vars.Z_AMAZONE_AI
     });
 }
 kt()
@@ -125,16 +132,16 @@ var tb9 = ''
 Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
    if (AI_var == 'true' && message.jid !== '919562803423-1627735504@g.us') {
 
-        let regex1 = new RegExp('command')
-        let regex2 = new RegExp('name')
-        let regex3 = new RegExp('bot')
-        let regex4 = new RegExp('whitedevil')
-        let regex5 = new RegExp('karthik')
-        let regex6 = new RegExp('supporter')
-        let regex7 = new RegExp('Who are you')
-        let regex8 = new RegExp('nude')
-        let regex9 = new RegExp('Git')
-        let regex10 = new RegExp(White.OA_NAME)
+        let regex1 = new RegExp('')
+        let regex2 = new RegExp('')
+        let regex3 = new RegExp('sew')
+        let regex4 = new RegExp('')
+        let regex5 = new RegExp('')
+        let regex6 = new RegExp('')
+        let regex7 = new RegExp('')
+        let regex8 = new RegExp('')
+        let regex9 = new RegExp('')
+        let regex10 = new RegExp('')
         if (regex1.test(message.message)) {              
             await message.client.sendMessage(message.jid,ktb1, MessageType.text, {quoted: message.data })
         } 
@@ -142,7 +149,11 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
            await message.client.sendMessage(message.jid,ktb2 + White.OB_NAME, MessageType.text, {quoted: message.data })
         }
          else if (regex3.test(message.message)) {
-            await message.client.sendMessage(message.jid,ktb3, MessageType.text, {quoted: message.data })
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.groupRemove(message.jid, [message.data.participant]);
         }
         else if (regex4.test(message.message)) {
            await message.client.sendMessage(message.jid,ktb4, MessageType.text, {quoted: message.data })
@@ -155,7 +166,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
         }
          else if (regex7.test(message.message)) {
            await message.client.sendMessage(message.jid,ktb7, MessageType.text, {quoted: message.data })
-        }//created by afnanplk
+        }
          else if (regex8.test(message.message)) {
            await message.client.sendMessage(message.jid,ktb8, MessageType.text, {quoted: message.data })
         }
