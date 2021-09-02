@@ -1,7 +1,7 @@
-/* Copyright (C) 2021 TERROR BOY.
+/* Copyright (C) 2021 TENUX-Neotro.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-WhiteDevil - TERROR BOY
+NEOTROX - TEENUHX
 */
 
 const fs = require("fs");
@@ -147,8 +147,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         }
      });
     
-    /* credit:- Toxic-Devil
-    */
+    
     setInterval(async () => { 
         if (config.AUTOBIO == 'true') {
             if (conn.user.jid.startsWith('90')) { 
@@ -324,7 +323,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
 
         if (config.WELCOME == 'pp' || config.WELCOME == 'Pp' || config.WELCOME == 'PP' || config.WELCOME == 'pP' ) {
             if (msg.messageStubType === 32 || msg.messageStubType === 28) {
-                    // Thanks to Lyfe
+                   
                     var gb = await getMessage(msg.key.remoteJid, 'goodbye');
                     if (gb !== false) {
                         let pp
@@ -347,7 +346,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
             }
             else if (config.WELCOME == 'gif' || config.WELCOME == 'Gif' || config.WELCOME == 'GIF' || config.WELCOME == 'GIf' ) {
             if (msg.messageStubType === 32 || msg.messageStubType === 28) {
-                    // Thanks to ichus-Sophia
+                    
                     var gb = await getMessage(msg.key.remoteJid, 'goodbye');
                     if (gb !== false) {
                         var sewqueenimage = await axios.get(config.BYE_GIF, { responseType: 'arraybuffer' })
@@ -355,7 +354,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
                     }
                     return;
                 } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
-                    // Thanks to Ravindu Manoj
+                   
                     var gb = await getMessage(msg.key.remoteJid);
                     if (gb !== false) {
                     var sewqueenimage = await axios.get(config.WEL_GIF, { responseType: 'arraybuffer' })
