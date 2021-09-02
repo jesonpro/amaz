@@ -1,18 +1,17 @@
-/* Copyright (C) 2020 Yusuf Usta.
-
+/* Copyright (C) 2021 TENUX-Neotro.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-
-WhatsAsena - Yusuf Usta
+NEOTROX - TEENUHX
 */
 
-// Komutları burada tutacağız.
+// හිමින් සැරේ ඇවිත් ඔයා....
 var config = require('./config');
 var Commands = [];
 
 function addCommand(info, func) {
-    // Basit bir fonksiyon, komut eklemek için.
-    var types = ['photo', 'image', 'text', 'message'];
+
+// ඉතින් අනේ පතන්නෙ මා ඔයත් මගෙම වෙන්න කියා 
+var types = ['photo', 'image', 'text', 'message'];
 
     var infos = {
         fromMe: info['fromMe'] === undefined ? true : info['fromMe'], // Or Sudo
