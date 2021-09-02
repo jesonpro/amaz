@@ -1,11 +1,7 @@
-/*Copyright (C) 2021 TERROR BOY
-
+/* Copyright (C) 2021 TENUX-Neotro.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-
-WhiteDevil- terror-boy
-
-    codded by afnanplk
+NEOTROX - TEENUHX
 */
 
 const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
@@ -1585,11 +1581,11 @@ Asena.addCommand({pattern: 'invite ?(.*)', fromMe: false, dontAddCommandList: tr
     await message.client.sendMessage(message.jid,Lang.INVITE + ' https://chat.whatsapp.com/' + invite, MessageType.text);
 }));
 
-Asena.addCommand({pattern: 'rename ?(.*)', onlyGroup: false, fromMe: true,desc: Asena}, (async (message, match) => {
+Asena.addCommand({pattern: 'rename ?(.*)', onlyGroup: false, fromMe: true,desc: Lang.RENAME}, (async (message, match) => {
     var im = await checkImAdmin(message);
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN,MessageType.text ,{quoted: message.data });
-    if (!im) return await message.client.sendMessage(message.jid,'i am not admin',MessageType.text);
+    if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
     if (match[1] === '') return await message.client.sendMessage(message.jid,'changing',MessageType.text);
     await message.client.groupUpdateSubject(message.jid, match[1]);
     await message.client.sendMessage(message.jid,'group name changed to  ```' + match[1] + '```' ,MessageType.text);
