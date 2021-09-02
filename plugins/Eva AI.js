@@ -1,47 +1,10 @@
-/* Codded by Phaticusthiccy
-
-Eva, The Phaticusthiccy's Multifunctional Artificial Intelligence
-
-Eva AI has more than 50 Gigabyte dataset which including neural calculator,
-wikipedia data, sentiment analysis, Instagram workflow with neural cells.
-
-Thanks for Brainshop.ai for a rest connection with non-ethernet interaction
-Eva database. 
-
-Eva is a multimedia-powered artificial intelligence with its own virtual brain.
-Brainshop.ai allow access to load all external conversation for train Neural cells,
-from every user's historical conversations.
-
-Think twice about your choices about Eva. 
-May react differently in directed situations. This is completely natural and depends on users.
-All message history with Eva is not exported to any 3rd applications.
-Since Eva works entirely with deep learning, all responsibility belongs to the user.
-
-Arvix Articles About Eva's System:
->> https://arxiv.org/abs/2106.09461
->> https://arxiv.org/abs/2102.00287
->>https://arxiv.org/abs/2106.06157
-
-Wikipedia Articles About Eva'a System:
->> https://en.m.wikipedia.org/wiki/Optical_character_recognition
->> https://en.m.wikipedia.org/wiki/Text_mining
->> https://en.m.wikipedia.org/wiki/Natural_language_processing
-
-*/
-// ===================================================
-/*
-Eva has never been connected to the internet previously.
-The Brainshop.ai supports to javascript datasets, so thats way we cloned some datas from Eva to 
-Brainshop.ai. 
-
-Therefore, 100% efficiency cannot be obtained from Eva Artificial Intelligence.
-The voice recognition doesn't work with eva infrastructure.
-We are using wit.ai's voice recognition for voicy conversation.
-The all input datas must be english. We are using google translate before send users inputs.
+/* Copyright (C) 2021 TENUX-Neotro.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+NEOTROX - TEENUHX
 */
 
-
-const Asena = require('../events');
+const Amazone = require('../events');
 const ffmpeg = require('fluent-ffmpeg');
 const fs = require('fs');
 const https = require('https');
@@ -69,8 +32,8 @@ if (conf.LANG == 'TR') vtalk_dsc = 'Eva sesli sohbetini başlatır.', reply_eva 
 if (conf.LANG == 'EN') vtalk_dsc = 'Starts to Eva voice chat.', reply_eva = '*Reply to Any Voice Message!*'
 if (conf.LANG == 'AZ') vtalk_dsc = 'Eva səsli söhbətinə başlayır.', reply_eva = '*Hər hansı bir səsli mesaja cavab verin!*'
 if (conf.LANG == 'PT') vtalk_dsc = 'Começa o bate-papo por voz de Eva.', reply_eva = '*Responder a qualquer mensagem de voz!*'
-if (conf.LANG == 'RU') vtalk_dsc = 'Запускает голосовой чат Eva.', reply_eva = '*Ответьте на любое голосовое сообщение!*'
-if (conf.LANG == 'HI') vtalk_dsc = 'Eva ध्वनि चैट प्रारंभ करता है', reply_eva = '*किसी भी ध्वनि संदेश का उत्तर दें!*'
+if (conf.LANG == 'SI') vtalk_dsc = 'Запускает голосовой чат Eva.', reply_eva = '*Ответьте на любое голосовое сообщение!*'
+if (conf.LANG == 'HI') vtalk_dsc = 'Eva Voice Chat ක්‍රියාත්මක කර ඇත.', reply_eva = '*Voice Message එක්කට ටැග් කරන්න!*'
 if (conf.LANG == 'ES') vtalk_dsc = 'Comienza con el chat de voz de Eva.', reply_eva = '*¡Responde a cualquier mensaje de voz!*'
 if (conf.LANG == 'ML') vtalk_dsc = 'Eva വോയ്‌സ് ചാറ്റിലേക്ക് ആരംഭിക്കുന്നു.', reply_eva = '*ഏത് വോയ്‌സ് സന്ദേശത്തിനും മറുപടി നൽകുക!*'
 if (conf.LANG == 'ID') vtalk_dsc = 'Mulai obrolan suara Eva.', reply_eva = '*Balas Pesan Suara Apapun!*'
@@ -117,7 +80,7 @@ Asena.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComman
         var uren = encodeURI(trmsg)
         await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
             var fins = ''                           
-            if (conf.LANG !== 'EN') {
+            if (conf.LANG !== 'SI') {
                 ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
                 if ('text' in ceviri) {
                     fins = ceviri.text
@@ -150,7 +113,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                         var uren = encodeURI(trmsg)
                         await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                             var fins = ''                           
-                            if (conf.LANG !== 'EN') {
+                            if (conf.LANG !== 'SI') {
                                 ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
                                 if ('text' in ceviri) {
                                     fins = ceviri.text
@@ -178,7 +141,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                     var uren = encodeURI(trmsg)
                     await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                         var fins = ''                           
-                        if (conf.LANG !== 'EN') {
+                        if (conf.LANG !== 'SI') {
                             ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
                             if ('text' in ceviri) {
                                 fins = ceviri.text
@@ -204,7 +167,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                 var uren = encodeURI(trmsg)
                 await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                     var fins = ''                           
-                    if (conf.LANG !== 'EN') {
+                    if (conf.LANG !== 'SI') {
                         ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
                         if ('text' in ceviri) {
                             fins = ceviri.text
@@ -284,12 +247,12 @@ if (conf.LANG == 'EN') {
     succ_on = 'Eva Opened Fully Functionally! Please wait a bit! ✅'
     succ_off = 'Eva Set to Semi-Functional! Please wait a bit! ☑️'
 }
-if (conf.LANG == 'AZ') {
-    fulleva_dsc = 'Tam funksional Eva xüsusiyyətlərini aktivləşdirir. Hesabınızı bir chatbot halına gətirin!'
-    already_on = 'Eva süni intellekt onsuz da tam işlək vəziyyətdədir.'
-    already_off = 'Eva AI hazırda yarı funksionaldır.'
-    succ_on = 'Eva Tamamilə İşlədi! Xahiş edirəm bir az gözləyin! ✅'
-    succ_off = 'Eva Yarı İşləkdir! Xahiş edirəm bir az gözləyin! ☑️'
+if (conf.LANG == 'SI') {
+    fulleva_dsc = 'Eva ක්‍රියාත්මක කිරීම.ඔබේ ගිණුම AI CHAT BOT ලෙස වෙනස් වේ.!🔘.eva on/off'
+    already_on = 'Eva AI කලින්ම ක්‍රියාත්මකයි..'
+    already_off = 'Eva AI කලින්ම වසා දමා ඇත..'
+    succ_on = 'සාර්ථකව Eva AI ක්‍රියාත්මකයි..රැඳී සිටින්න! ✅'
+    succ_off = 'EVA AI සාර්ථකව ක්‍රියා විරහිත කර ඇත! ☑️'
 }
 if (conf.LANG == 'RU') {
     fulleva_dsc = 'Активирует полнофункциональные функции Eva. Превратите свой аккаунт в чат-бота!'
@@ -334,7 +297,7 @@ if (conf.LANG == 'ID') {
     succ_off = 'Eva Set ke Semi-Fungsional! Mohon tunggu sebentar! ☑️'
 }
 
-Asena.addCommand({ pattern: 'fulleva ?(.*)', desc: fulleva_dsc, fromMe: true,dontAddCommandList: true, usage: '.fulleva on / off' }, (async (message, match) => {
+Asena.addCommand({ pattern: 'eva ?(.*)', desc: fulleva_dsc, fromMe: true,dontAddCommandList: true, usage: '.fulleva on / off' }, (async (message, match) => {
     var eva_status = `${conf.FULLEVA}`
     if (match[1] == 'on') {
         if (eva_status == 'true') {
