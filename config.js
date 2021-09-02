@@ -59,6 +59,7 @@ module.exports = {
     OVERMSG: process.env.OVER_MESSAGE === undefined ? 'default' : process.env.OVER_MESSAGE,
     TAG_H: process.env.TAG_HEADER === undefined ? 'Amazone' : process.env.TAG_HEADER,
     TAG_G: process.env.TAG_HEADER === undefined ? '' : process.env.TAG_HEADER,
+    AFN: process.env.AFN === undefined ? '🚀Amazone Alexa v6' : process.env.AFN,
     AFKMSG: process.env.AFK_MESSAGE === undefined ? 'default' : process.env.AFK_MESSAGE,
     HANDLERS: process.env.HANDLERS === undefined ? '^[.!;]' : process.env.HANDLERS,
     YAK: process.env.YAK === undefined ? '94766598862,0' : process.env.YAK,
