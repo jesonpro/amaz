@@ -1,29 +1,29 @@
 {
-  "name": "WhiteDevil",
+  "name": "Amazone",
   "version": "7.3.6",
-  "description": "WhiteDevil is the Modified Version of WhatsAsena, Made By @TERROR BOY with Baileys.",
-  "main": "./WhiteDevil/bot.js",
+  "description": "Amazone Alexa is the Modified Version of WhatsAsena But we are not Fake Bots, Made By @TeenuhX with Baileys.",
+  "main": "./amazone/bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/terror-boy/WhiteDevil.git"
+    "url": "git+https://github.com/jesonpro/amazonex.git"
   },
   "keywords": [
     "whatsapp",
     "bot",
     "ai",
-    "asena",
-    "WhatsAsena"
+    "neutro",
+    "amazone"
   ],
-  "author": "terror-boy",
-  "developer": "@terror-boy / @farhan-dqz",
+  "author": "Teenuhx",
+  "developer": "@teenuhX / @Rashid Riyaz",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/terror-boy/WhiteDevil/issues"
+    "url": "https://github.com/jesonpro/amazonex/issue"
   },
-  "homepage": "https://github.com/terror-boy/WhiteDevil#readme",
+  "homepage": "https://github.com/jesonpro/amazonex#readme",
   "dependencies": {
     "@adiwajshing/baileys": "3.5.2",
     "@lh2020/speedtest-net": "^2.1.1",
