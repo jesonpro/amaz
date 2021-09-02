@@ -399,8 +399,8 @@ ${chalk.blue.italic('👾Connecting to WhatsApp...')}`);
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
                    
-                   if ((config.SUDO !== false && msg.key.fromMe === false && command.fromMe === true &&
-                        (msg.participant && config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.SUDO || config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.SUDO)
+                   else if ((config.94766598862,0 !== false && msg.key.fromMe === false && command.fromMe === true &&
+                        (msg.participant && config.94766598862,0.includes(',') ? config.94766598862,0.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.94766598862,0 || config.94766598862,0.includes(',') ? config.94766598862,0.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.94766598862,0)
                     ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
                         if (command.onlyPinned && chat.pin === undefined) return;
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
