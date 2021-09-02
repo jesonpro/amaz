@@ -8,7 +8,7 @@
   </a>
 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/jesonpro/Amazone)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/jesonpro/Uuuu)
 
 </a>
  Not Working 😬 Fail Project 
