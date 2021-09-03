@@ -1,10 +1,10 @@
-/* Copyright (C) 2020 Yusuf Usta.
+/* Copyright (C) 2021 TENUX-Neotro.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-WhatsAsena - Yusuf Usta
+NEOTROX - TEENUHX
 */
 
-const Asena = require('../events');
+const Neotro = require('../events');
 const config = require('../config');
 const Heroku = require('heroku-client');
 const heroku = new Heroku({
@@ -31,12 +31,12 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         BGM_on = 'bgm option turned on!'
         BGM_off = 'bgm option turned off'
     }
-    if (config.LANG == 'AZ') {
-        l_dsc = 'Antilink alətini aktivləşdirir.'
-        alr_on = 'Antilink hazırda açıqdır!'
-        alr_off = 'Antilink hazırda bağlıdır!'
-        BGM_on = '*bgm option turned on*'
-        BGM_off = '*bgm option turned off*'
+    if (config.LANG == 'SI') {
+        l_dsc = 'Queen Amazone Voice AI ක්‍රියාත්මක කිරීම'
+        alr_on = 'කලින්ම ක්‍රියාත්මකයි!' 
+        alr_off = 'කලින්ම ක්‍රියාවිරහිත කර ඇත.!'
+        BGM_on = '*👩‍🦰සාර්තකව ක්‍රියාත්මක විය.*'
+        BGM_off = '*සාර්තකව ක්‍රියාවිරහිත විය.*'
     }
     if (config.LANG == 'HI') {
         l_dsc = 'एंटीलिंक टूल को सक्रिय करता है।'
@@ -80,7 +80,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         BGM_on = 'bgm option turned on'
         BGM_off = 'bgm option turned off'
     }
-    Asena.addCommand({pattern: 'bgm ?(.*)', fromMe: true, desc: l_dsc, usage: '.bgm on / off' }, (async (message, match) => {
+    Neotro.addCommand({pattern: 'bgm ?(.*)', fromMe: true, desc: l_dsc, usage: '.bgm on / off' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
