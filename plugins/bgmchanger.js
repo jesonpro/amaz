@@ -1,6 +1,7 @@
-/* Copyright (C) 2020 afnanplk.
-re edited by terror-boy
-*/
+/* Copyright (C) 2021 TENUX-Neotro.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+NEOTROX - TEENUHX
 
 const Asena = require('../events');
 const config = require('../config');
@@ -45,3 +46,5 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
                 await message.sendMessage(BGM_ONE)
         }
     }));
+
+*/
