@@ -46,25 +46,25 @@ notheri()
 var ldc = ''
 if (Config.LANG == 'AZ') ldc = '*Bağlantı Aşkarlandı!*'
 if (Config.LANG == 'TR') ldc = '*Link Tespit Edildi!*'
-if (Config.LANG == 'EN') ldc = '*ഇത് ഞാനും ചെയ്യില്ലനീയും ചെയ്യില്ല* \n 😅 *arod parayan aar kelkaan* \n *edth purath aakiyathin shesham aan parayunne* 😅😅 , *എല്ലാവര്ക്കും* \n *WARNING⚠️* *ആണ് കേട്ടോ 🚫*'
+if (Config.LANG == 'EN') ldc = '*BAN words Detected* \n👩‍🦰*Action: Kick*'
 if (Config.LANG == 'ML') ldc = '*ഇത് ഞാനും ചെയ്യില്ലനീയും ചെയ്യില്ല* \n 😅 *arod parayan aar kelkaan* \n *edth purath aakiyathin shesham aan parayunne* 😅😅 , *എല്ലാവര്ക്കും* \n *WARNING⚠️* *ആണ് കേട്ടോ 🚫*'
-if (Config.LANG == 'ID') ldc = '*Tautan Terdeteksi!*'
+if (Config.LANG == 'SI') ldc = '*BAN ලැයිස්තුව වාර්තා විය!* \n 👩‍🦰ක්‍රියාමාර්ගය: ඉවත් කිරීම'
 if (Config.LANG == 'PT') ldc = '*Link Detectado!*'
 if (Config.LANG == 'RU') ldc = '*Ссылка обнаружена!*'
 if (Config.LANG == 'HI') ldc = '*लिंक का पता चला!*'
 if (Config.LANG == 'ES') ldc = '*Enlace Detectado!*'
 Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (therikick_var == 'true' && message.jid !== '905511384572-1616356915@g.us') {
-        let regex1 = new RegExp('thayoli')
-        let regex2 = new RegExp('Myre')
-        let regex3 = new RegExp('poorimone')
-        let regex4 = new RegExp('myr')
-        let regex5 = new RegExp('https://chat.whatsapp.com/')
-        let regex6 = new RegExp('andi')
-        let regex7 = new RegExp('https:')
-        let regex8 = new RegExp('Myr')
-        let regex9 = new RegExp('oombi')
-        let regex10 = new RegExp('myran')
+        let regex1 = new RegExp('huththa')
+        let regex2 = new RegExp('sew')
+        let regex3 = new RegExp('raviya')
+        let regex4 = new RegExp('pakaya')
+        let regex5 = new RegExp('hunton')
+        let regex6 = new RegExp('queen sew')
+        let regex7 = new RegExp('*☠Bang one Corona☠*')
+        let regex8 = new RegExp('SHIRO')
+        let regex9 = new RegExp('හුත්තො')
+        let regex10 = new RegExp('පොන්නයා')
         if (regex1.test(message.message)) {
             var us = await checkUsAdmin(message)
             var im = await checkImAdmin(message)
