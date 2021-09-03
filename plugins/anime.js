@@ -3,10 +3,12 @@ const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
+const Language = require('../language');
+const Lang = Language.getString('amazone');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'anime', fromMe: true, desc: 'random anime image'}, (async (message, match) => {
+    Asena.addCommand({pattern: 'anime', fromMe: true, desc: Lang.ANIM_DESC}, (async (message, match) => {
 
     var r_text = new Array ();
 
@@ -94,13 +96,13 @@ if (Config.WORKTYPE == 'private') {
 
     var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: '*WHITE DEVIL*'})
+    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.BOT_NAME})
 
     }));
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'anime', fromMe: false, desc:'random anime image '}, (async (message, match) => {
+    Asena.addCommand({pattern: 'anime', fromMe: false, desc: Lang.ANIME_DESC}, (async (message, match) => {
 
     var r_text = new Array ();
 
@@ -188,7 +190,7 @@ else if (Config.WORKTYPE == 'public') {
 
     var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: '*WHITE DEVIL*'})
+    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.BOT_NAME})
 
     }));
 }
