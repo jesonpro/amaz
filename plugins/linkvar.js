@@ -1,5 +1,7 @@
-/* Copyright (C) 2020 plk
-afnplk
+/* Copyright (C) 2021 TENUX-Neotro.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+NEOTROX - TEENUHX
 */
 
 const Asena = require('../events');
@@ -18,20 +20,20 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
    
     if (config.LANG == 'EN') {
         l_dsc = 'remove for all link'
-        alr_on = '!'
-        alr_off = '!'
+        alr_on = 'Already on'
+        alr_off = 'Already Off'
         LINKT_on = '*M_LINK TURNED ON*'
         LINKT_off = '*M_LINK TURNED OFF*'
     }
-    if (config.LANG == 'ML') {
-        l_dsc = '.'
-        alr_on = '!'
-        alr_off = '!'
+    if (config.LANG == 'SI') {
+        l_dsc = 'සියලුම Link පළකරන්නන් සමූහයෙන් ඉවත් කරයි'
+        alr_on = 'කලින්ම ක්‍රියාත්මකයි'
+        alr_off = 'කලින්ම අක්‍රියයි'
         LINKT_on = 'M_LINK TURNED ON'
         LINKT_off = 'M_LINK TURNED Off'
     }
    
-    Asena.addCommand({pattern: 'mlink ?(.*)', fromMe: true, desc: l_dsc, usage: '.mlink on / of' }, (async (message, match) => {
+    Asena.addCommand({pattern: 'allink ?(.*)', fromMe: true, desc: l_dsc, usage: '.allink on / of' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
