@@ -18,8 +18,8 @@ DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBU
 
 module.exports = {
     VERSION: 'v6.3.6',
-    CHANNEL: 'https://t.me/remasterplugin',
-    SESSION: process.env.AMAZONE === undefined ? '' : process.env.AMAZONE_SESSION,
+    CHANNEL: 'https://t.me/neotroplug',
+    SESSION: process.env.AMAZONE_SESSION === undefined ? '' : process.env.ANAZONE_SESSION,
     ANTİLİNK: process.env.ANTİ_LİNK === undefined ? 'false' : process.env.ANTİ_LİNK,
     AUTOBİO: process.env.AUTO_BİO === undefined ? 'false' : process.env.AUTO_BİO,
     THERI_KICK: process.env.THERI_KICK === undefined ? 'false' : process.env.THERI_KICK,
