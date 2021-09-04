@@ -6,6 +6,8 @@ NEOTROX - TEENUHX
 
 const Neotro = require('../events');
 const config = require('../config');
+const Language = require('../language');
+const Lang = Language.getString('amazone');
 const Heroku = require('heroku-client');
 const heroku = new Heroku({
     token: config.HEROKU.API_KEY
