@@ -2,7 +2,7 @@
   "name": "Amazone",
   "version": "7.3.6",
   "description": "Amazone Alexa is the Modified Version of WhatsAsena But we are not Fake Bots, Made By @TeenuhX with Baileys.",
-  "main": "./amazone/bot.js",
+  "main": "./amazonex/bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
   },
