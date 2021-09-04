@@ -1,5 +1,5 @@
 {
-    "name": "WhiteDevil",
+    "name": "amazone",
     "description": "WhiteDevil- Whatsapp UserBot",
     "logo": "https://i.imgur.com/kB30S41.png",
     "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai"],
@@ -51,15 +51,10 @@
             "required": true,
             "value": "^[.!;]"
         },
-       "Z_WHITE_AI": {
-            "description": "turn on chat back auto reply WHITE (use true to on and fale to off)",
-            "required": true,
-        "value": "true"
-        },
-        "Z_BOT_NAME": {
+       "BOT_NAME": {
             "description": "give a name you disire to give your bot (for auto reply white to identify)",
             "required": false,
-            "value": "WHITEDEVIL"
+            "value": "Amazone"
         },
         "Z_DEP_NAME": {
             "description": "bot deployer name make it short  (for auto reply white to identify)",
