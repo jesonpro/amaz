@@ -1,10 +1,10 @@
-/* Copyright (C) 2020 Yusuf Usta.
+/* Copyright (C) 2021 TENUX-Neotro.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-WhatsAsena - Yusuf Usta
+NEOTROX - TEENUHX
 */
 
-const Asena = require('../events');
+const Neotro = require('../events');
 const config = require('../config');
 const Heroku = require('heroku-client');
 const heroku = new Heroku({
@@ -31,12 +31,12 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         succ_on = 'Antilink Opened Successfully!'
         succ_off = 'Antilink Closed Successfully!'
     }
-    if (config.LANG == 'AZ') {
-        l_dsc = 'Antilink alətini aktivləşdirir.'
-        alr_on = 'Antilink hazırda açıqdır!'
-        alr_off = 'Antilink hazırda bağlıdır!'
-        succ_on = '*Antilink Uğurla Açıldı!*'
-        succ_off = '*Antilink Uğurla Bağlandı!*'
+    if (config.LANG == 'SI') {
+        l_dsc = 'එය Antilink පද්ධතිය ක්‍රියාත්මක කරයි.'
+        alr_on = 'Antilink කලින්ම ක්‍රියාත්මකයි!'
+        alr_off = 'Antilink කලින්ම වසා දමා ඇත!'
+        succ_on = '*Antilink සාර්තකව ක්‍රියාත්මක විය!*'
+        succ_off = '*Antilink සාර්තකව අක්‍රිය විය!*'
     }
     if (config.LANG == 'HI') {
         l_dsc = 'एंटीलिंक टूल को सक्रिय करता है।'
