@@ -554,11 +554,11 @@
             "ARAT": "Searched Song:"
         },
         "amazone": {
-            "LY_DESC": "Finds the lyrics of the song.",
-            "NEED": "```You Must Write Any Song!```",
+            "APK": "GET mod app link.",
+            "ANIME_DESC": "```You Must Write Any Song!```",
             "BR_DESC": "Ask a quation",
-            "AUT": "Song Owner:",
-            "BUL": "Founded Song:",
+            "ANTI": "Turn On AntiLink",
+            "DEVICE": "get phone details",
             "ARAT": "Searched Song:"
         },
         "covid": {
